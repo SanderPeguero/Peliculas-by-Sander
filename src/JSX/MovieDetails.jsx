@@ -29,14 +29,22 @@ export function MovieDetails() {
     return ( 
         <div className={styles.detailsContainer}>
             <img 
-                className={`${styles.col} ${styles.movieImage}`}
+                className={`${styles.title} ${styles.movieImage}`}
                 src={imageUrl} 
                 alt={Movies.title} 
             />
-            <div className={`${styles.col} ${styles.movieDetails}`}>
-                <p className={styles.firstItem}><strong>Title:</strong> {Movies.title}</p>
-                <p><strong>Genres:</strong>{Movies.genres.map(genre => genre.name).join(", ")}</p>
-                <p><strong>Description:</strong> {Movies.overview}</p>
+            <div className={`${styles.title} ${styles.movieDetails}`}>
+                <p className={styles.firstItem}><strong className={styles.subtitle}>Title:</strong> {Movies.title}</p>
+                <p><strong className={styles.subtitle}>Genres:</strong>{Movies.genres.map(genre => genre.name).join(", ")}</p>
+                <p><strong className={styles.subtitle}>Duration:</strong> {Movies.runtime} minutes</p>
+                <p><strong className={styles.subtitle}>Release Date:</strong> {Movies.release_date}</p>
+                <p>
+                    <strong className={styles.subtitle}>Home Page:  </strong> 
+                    <a className={styles.link} href= {Movies.homepage}>
+                         {Movies.homepage} 
+                    </a> 
+                </p>
+                <p><strong className={styles.subtitle}>Description:</strong> {Movies.overview}</p>
             </div>
         </div>
     );
