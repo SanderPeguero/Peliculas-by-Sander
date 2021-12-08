@@ -1,0 +1,23 @@
+.title {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 0%;
+
+}
+
+.subtitle {
+    color: white;
+    text-align: center;
+    vertical-align: top;
+    font-size: 1.5rem;
+    margin-top: 0%;
+
+}
+
+
+body {
+    
+    font-size: 12pt;
+
+}
