@@ -6,15 +6,28 @@
 
 .searchBox {
     position: relative;
+    
 
 }
 
 .searchInput {
-    height: 20px;
+    font-size: 1.1rem;
+    height: 30px;
+    width: 200px;
     border-radius: 10px;
     padding: 5px 20px 5px 10px;
+    border: 2px solid #0d1d2e;
+    box-shadow: 0 0 5px #0d1d2e;
 
 }
+
+.searchInput:focus {
+    outline: none;
+    border: 2px solid #000000;
+    box-shadow: 0 0 2px #ffffff;
+    
+}
+
 
 .searchButton {
     position: absolute;
@@ -25,5 +38,6 @@
     
     border: none;
     background: none;
-
 }
+
+

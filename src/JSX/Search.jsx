@@ -1,15 +1,27 @@
 import Styles from "../CSS/Search.module.css";
 import { ImSearch } from "react-icons/im";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import { useQuery } from "./Hooks/useQuery";
 
 export function Search() {
-    const [searchText, setsearchText] = useState("");
     const navigate = useNavigate();
+    const [searchText, setsearchText] = useState("");
+    
+    const query = useQuery();
+    const search = query.get("search");
+    
+    useEffect(() => {
+        setsearchText(search || ""); 
+    }, [search]);
+
     const handleSubmit = (e) => {
         e.preventDefault();
         navigate("/?search=" + searchText);
     }
+
+
+
 
     return (
         <form className={Styles.searchContainer} onSubmit={handleSubmit}>

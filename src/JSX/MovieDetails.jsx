@@ -4,10 +4,13 @@ import { get } from "../Api.js";
 import styles from "../CSS/MovieDetails.module.css";
 import { Spinner } from "./Spinner.jsx";
 
+
 export function MovieDetails() {
     const { movieId } = useParams();
     const [isLoading, setIsLoading] = useState(true);
     const [Movies, setMovie] = useState(null);
+
+
 
     useEffect(() => {  
         setIsLoading(true);
