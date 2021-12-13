@@ -1,10 +1,11 @@
-import { FaRegGrinSquint } from "react-icons/fa";
 import styles from "../CSS/Spinner.module.css";
+import Loader from "../Images/Logo.png";
 
 export function Spinner() {
     return (
         <div className={styles.spinner}>
-            <FaRegGrinSquint className={styles.spinning} size={60}/>
+            <img src={Loader} alt="" className={styles.spinning} size={10}/>
+
         </div>
     )
 }

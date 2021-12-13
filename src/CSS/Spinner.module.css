@@ -7,6 +7,8 @@
 }
 
 .spinning {
+    height: 65px;
+    width: 75px;
     animation: spinner 1.7s infinite;
 }
 

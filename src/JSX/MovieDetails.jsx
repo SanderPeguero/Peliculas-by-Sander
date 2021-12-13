@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import { get } from "../Api.js";
 import styles from "../CSS/MovieDetails.module.css";
 import { Spinner } from "./Spinner.jsx";
+import poster from "../Images/Poster.jpg";
 
 
 export function MovieDetails() {
@@ -26,7 +27,7 @@ export function MovieDetails() {
         return null;
     }
 
-    const imageUrl = "https://image.tmdb.org/t/p/w500" + Movies.poster_path;
+    const imageUrl = Movies.poster_path ? "https://image.tmdb.org/t/p/w500" + Movies.poster_path : poster;
 
     return ( 
         <div className={styles.detailsContainer}>
