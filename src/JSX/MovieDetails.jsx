@@ -11,7 +11,6 @@ export function MovieDetails() {
     const [Movies, setMovie] = useState(null);
 
 
-
     useEffect(() => {  
         setIsLoading(true);
         get("/movie/" + movieId).then((data) => {
