@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 import { get } from "../Api.js";
 import styles from "../CSS/MovieDetails.module.css";
 import { Spinner } from "./Spinner.jsx";
-import poster from "../Images/Poster.jpg";
+import poster from "../Images/Poster.png";
 
 
 export function MovieDetails() {
